@@ -1,6 +1,5 @@
 using UnityEngine;
 
-// ”правление выстрелом с воспроизведением эффектов
 public class ShotCannon : CannonComponents
 {
     [SerializeField] private GameObject _projectilePrefab;
@@ -12,10 +11,8 @@ public class ShotCannon : CannonComponents
     private Rigidbody  _projectileRigidbody;
     private GameObject _projectile;
 
-    public void Start()
-    {
-        _shotParametrs = new ShotParametrs(_effects.shotEffect, 100f);
-    }
+    public void Start() => _shotParametrs = new ShotParametrs(_effects.shotEffect, 100f);
+    
     public override void Execute()
     {
         _projectile = Instantiate(_projectilePrefab, _pointOfShot);
