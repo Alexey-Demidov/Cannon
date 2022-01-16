@@ -10,5 +10,5 @@ public class ReloadCannon : CannonComponents
     }
     public override void Disable() => this.enabled = false;
     public override void Enable() => this.enabled = true;
-    public void EndReload() => _cannon.SwitchToAiming();
+    public void EndReload() => _cannon.SwitchToAiming(); // вызов при окончании анимации перезарядки
 }
