@@ -16,7 +16,7 @@ public class Cannon : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))  // стрельба
+        if (Input.GetKeyDown(KeyCode.Space))  
         {
             if (_shot.isActiveAndEnabled)
             {
@@ -25,7 +25,7 @@ public class Cannon : MonoBehaviour
             }              
         }
 
-        if (Input.GetMouseButton(0) && _setForceBySlider.NotDragging)    // наводка
+        if (Input.GetMouseButton(0) && _setForceBySlider.NotDragging)    
         {
             _rotate.Execute();
         }
