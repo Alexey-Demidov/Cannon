@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// Методы для компонентов пушки
 public abstract class CannonComponents : MonoBehaviour
 {
     public abstract void Enable();
@@ -16,7 +17,7 @@ public class Cannon : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))  
+        if (Input.GetKeyDown(KeyCode.Space))  // стрельба
         {
             if (_shot.isActiveAndEnabled)
             {
@@ -25,7 +26,7 @@ public class Cannon : MonoBehaviour
             }              
         }
 
-        if (Input.GetMouseButton(0) && _setForceBySlider.NotDragging)    
+        if (Input.GetMouseButton(0) && _setForceBySlider.NotDragging)    // вращение (прицеливание)
         {
             _rotate.Execute();
         }
